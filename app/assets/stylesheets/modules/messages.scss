@@ -2,21 +2,37 @@
   box-sizing: border-box;
 }
 
-.side-bar {
-  height: 100vh;
-  width: 300px;
-  background-color: #2f3e51;
+.wrapper {
   display: flex;
-  &__user-name{
+}
+
+.side-bar {
+  width: 300px;
+  float: left;
+  &__user-name {
     height: 100px;
-    width: 100%;
     background-color: #253141;
+  }
+  &__group-list {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+
   }
 }
 
 .main-chat {
-  height: 100vh;
-  width: calc(100vh - 300px);
-  background-color: #ffffff;
-  display: flex;
+  width: calc(100vw - 300px);
+  float: left;
+  &__group-info{
+    height: 100px;
+    border-bottom: 1px solid #eee;
+  }
+  &__message-list{
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+  }
+  &__message-form{
+    height: 90px;
+    background-color: #d2d2d2;
+  }
 }
