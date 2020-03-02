@@ -14,13 +14,15 @@
 ##postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false|
+|text|string||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :users
 - belongs_to :groups
+## Validation
+- validates :posts, precence: true
 
 ##groupsテーブル
 |Column|Type|Options|
