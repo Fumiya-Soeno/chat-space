@@ -3,7 +3,7 @@
 ##usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |password|string|null: false|
 |mailadress|string|null: false|
 |group_id|integer|null: false, foreign_key: true|
