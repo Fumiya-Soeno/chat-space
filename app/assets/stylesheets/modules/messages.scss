@@ -4,14 +4,19 @@
 
 .side-bar {
   height: 100vh;
-  width:300px;
-  background-color:#253141;
+  width: 300px;
+  background-color: #2f3e51;
   display: flex;
+  &__user-name{
+    height: 100px;
+    width: 100%;
+    background-color: #253141;
+  }
 }
 
 .main-chat {
   height: 100vh;
-  width:calc(100vh - 300px);
-  background-color:#ffffff;
+  width: calc(100vh - 300px);
+  background-color: #ffffff;
   display: flex;
 }
