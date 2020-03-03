@@ -32,8 +32,9 @@
       .main-chat__message-form__new-message__input-area
         .main-chat__message-form__new-message__input-area__text
           type a message
-        .main-chat__message-form__new-message__input-area__image
-          = link_to("#") do
-            = icon('far', 'image')
+
+        %label{class: "main-chat__message-form__new-message__input-area__image"}
+          = icon('fas', 'image')
+          %input{type: "file"}
       .main-chat__message-form__new-message__send-btn
         Send
