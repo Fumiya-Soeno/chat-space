@@ -10,4 +10,30 @@
     .main-chat__group-info__edit-btn
       Edit
   .main-chat__message-list
+    .main-chat__message-list__message
+      .main-chat__message-list__message__upper
+        .main-chat__message-list__message__upper__user
+          fumiya
+        .main-chat__message-list__message__upper__date
+          2020/03/03(Tue) 07:51:00
+      .main-chat__message-list__message__main
+        投稿テスト1
+    //
+    .main-chat__message-list__message
+      .main-chat__message-list__message__upper
+        .main-chat__message-list__message__upper__user
+          fumiya
+        .main-chat__message-list__message__upper__date
+          2020/03/03(Tue) 07:52:00
+      .main-chat__message-list__message__main
+        投稿テスト2
   .main-chat__message-form
+    .main-chat__message-form__new-message
+      .main-chat__message-form__new-message__input-area
+        .main-chat__message-form__new-message__input-area__text
+          type a message
+        .main-chat__message-form__new-message__input-area__image
+          = link_to("#") do
+            = icon('far', 'image')
+      .main-chat__message-form__new-message__send-btn
+        Send
