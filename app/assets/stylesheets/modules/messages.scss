@@ -9,7 +9,10 @@
 .side-bar {
   width: 300px;
   float: left;
+  color: #fff;
+  font-weight: bold;
   &__user-name {
+    padding: 0 20px;
     height: 100px;
     background-color: #253141;
     display: flex;
@@ -17,12 +20,12 @@
     &__name-box{
       width: 300px;
       height: 20px;
-      margin: 0 20px;
       display: flex;
       justify-content: space-between;
       line-height: 20px;
-      color: #fff;
-      font-weight: bold;
+      &__user {
+        font-size: 16px;
+      }
       a {
         color: #fff;
         text-decoration: none;
@@ -32,7 +35,15 @@
   &__group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-
+    padding: 0 20px;
+    &__group-name {
+      padding:20px 0 5px 0;
+      font-size: 15px;
+    }
+    &__latest-message{
+      padding-bottom: 40px;
+      font-size: 11px;
+    }
   }
 }
 
