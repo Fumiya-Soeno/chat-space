@@ -2,62 +2,67 @@
   box-sizing: border-box;
 }
 
+$CLwhite:   #fff;
+$CLbrown:   #999;
+$CLblue: #38aef0;
+$CLgray: #434a54;
+
 .wrapper {
   display: flex;
 }
 
 .side-bar {
-  width: 300px;
   float: left;
-  color: #fff;
+  width: 300px;
+  color: $CLwhite;
   font-weight: bold;
   &__user-name {
-    padding: 0 20px;
     height: 100px;
-    background-color: #253141;
     display: flex;
+    padding: 0 20px;
     align-items: center;
+    background-color: #253141;
     &__name-box{
       width: 300px;
       height: 20px;
       display: flex;
-      justify-content: space-between;
       line-height: 20px;
+      justify-content: space-between;
       &__user {
         font-size: 16px;
       }
       a {
-        color: #fff;
+        color: $CLwhite;
         text-decoration: none;
       }
     }
   }
   &__group-list {
+    padding: 0 20px;
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    padding: 0 20px;
     &__group-name {
-      padding:20px 0 5px 0;
       font-size: 15px;
+      padding:20px 0 5px 0;
     }
     &__latest-message{
-      padding-bottom: 40px;
       font-size: 11px;
+      padding-bottom: 40px;
     }
   }
 }
 
 .main-chat {
-  width: calc(100vw - 300px);
   float: left;
+  width: calc(100vw - 300px);
   &__group-info{
+    color: #333;
     height: 100px;
-    border-bottom: 1px solid #eee;
     display: flex;
+    padding: 0 40px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
-    color: #333;
+    border-bottom: 1px solid #eee;
     &__left-box{
       margin-top: 35px;
       &__current-group {
@@ -65,7 +70,7 @@
         margin-bottom: 15px;
       }
       &__members-list {
-        color: #999;
+        color: $CLbrown;
         font-size: 12px;
         &__member {
           display: inline;
@@ -73,67 +78,67 @@
       }
     }
     &__edit-btn {
-      padding: 0 20px;
       height: 40px;
-      line-height: 40px;
+      padding: 0 20px;
       font-size: 16px;
-      color: #38aef0;
-      border: 1px solid #38aef0;
       cursor: pointer;
+      color: $CLblue;
+      line-height: 40px;
+      border: 1px solid $CLblue;
     }
   }
   &__message-list {
+    padding: 46px 40px;
     height: calc(100vh - 190px);
     background-color: #fafafa;
-    padding: 46px 40px;
     &__message {
       padding-bottom: 40px;
       &__upper {
         margin-bottom: 10px;
         &__user {
-          font-weight: bold;
           display: inline;
+          font-weight: bold;
         }
         &__date {
-          margin-left: 12px;
+          color: $CLbrown;
           font-size: 12px;
-          color: #999;
           display: inline;
+          margin-left: 12px;
         }
       }
       &__main {
-        color: #434a54;
+        color: $CLgray;
       }
     }
   }
   &__message-form {
     height: 90px;
-    background-color: #d2d2d2;
     display: flex;
     align-items: center;
+    background-color: #d2d2d2;
     &__new-message {
-      margin: 0px 40px;
       width: 100%;
       height: 50px;
-      position: relative;
       display: flex;
+      margin: 0px 40px;
+      position: relative;
       &__input-area {
         width: 80%;
-        background-color: #fff;
-        line-height: 50px;
         display: flex;
-        justify-content: space-between;
+        line-height: 50px;
         position: relative;
+        background-color: $CLwhite;
+        justify-content: space-between;
         &__text {
-          position: absolute;
           width: 100%;
+          color: $CLgray;
+          position: absolute;
           padding:0 40px 0 10px;
-          color: #434a54;
         }
         &__image {
-          position: absolute;
           right: 10px;
           font-size: 26px;
+          position: absolute;
           input {
             display: none;
           }
@@ -141,13 +146,13 @@
         }
       }
       &__send-btn {
+        color: $CLwhite;
+        cursor: pointer;
         padding: 0 30px;
         line-height: 50px;
         font-weight: bold;
-        color: #fff;
-        background-color: #38AEF0;
         margin-left: 15px;
-        cursor: pointer;
+        background-color: $CLblue;
       }
     }
   }
