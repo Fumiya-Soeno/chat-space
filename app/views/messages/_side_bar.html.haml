@@ -2,11 +2,12 @@
   .side-bar__user-name
     .side-bar__user-name__name-box
       .side-bar__user-name__name-box__user
-        fumiya
+        = current_user.name
       .side-bar__user-name__name-box__icon
         = link_to("#") do
           = icon('far', 'edit')
-          = icon('fas', 'cog')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog')
   .side-bar__group-list
     .side-bar__group-list__group-name
       techcamp
