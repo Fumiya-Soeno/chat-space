@@ -67,6 +67,9 @@ $CLgray: #434a54;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #eee;
+    a {
+      text-decoration: none;
+    }
     &__left-box{
       margin-top: 35px;
       &__current-group {

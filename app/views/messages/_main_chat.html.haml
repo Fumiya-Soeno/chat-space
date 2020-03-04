@@ -8,8 +8,9 @@
         .main-chat__group-info__left-box__members-list__member
         - @members.each do |member|
           = User.find(member.user_id).name
-    .main-chat__group-info__edit-btn
-      Edit
+    = link_to edit_group_path(@group) do
+      .main-chat__group-info__edit-btn
+        Edit
   .main-chat__message-list
     = render @messages
 
