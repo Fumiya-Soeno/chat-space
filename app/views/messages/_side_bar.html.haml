@@ -10,7 +10,7 @@
           = icon('fas', 'cog')
   .side-bar__group-list
     - current_user.groups.each do |group|
-      = link_to "/groups/#{group.id}/messages" do
+      = link_to group_messages_path(group) do
         .side-bar__group-list__group-name
           = group.name
         .side-bar__group-list__latest-message
