@@ -125,38 +125,38 @@ $CLgray: #434a54;
       height: 50px;
       display: flex;
       margin: 0px 40px;
-      position: relative;
       &__input-area {
         width: 80%;
         display: flex;
-        line-height: 50px;
         position: relative;
-        background-color: $CLwhite;
         justify-content: space-between;
         &__text {
           width: 100%;
-          color: $CLgray;
+          height: 50px;
           position: absolute;
           padding:0 40px 0 10px;
         }
         &__image {
           right: 10px;
           font-size: 26px;
+          line-height: 50px;
           position: absolute;
           input {
             display: none;
           }
           cursor: pointer;
         }
-      }
-      &__send-btn {
-        color: $CLwhite;
-        cursor: pointer;
-        padding: 0 30px;
-        line-height: 50px;
-        font-weight: bold;
-        margin-left: 15px;
-        background-color: $CLblue;
+        &__send-btn {
+          right: -130px;
+          color: $CLwhite;
+          cursor: pointer;
+          padding: 0 30px;
+          line-height: 50px;
+          font-weight: bold;
+          margin-left: 15px;
+          position: absolute;
+          background-color: $CLblue;
+        }
       }
     }
   }
