@@ -98,6 +98,7 @@ $CLgray: #434a54;
     padding: 46px 40px;
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    overflow: scroll;
     &__message {
       padding-bottom: 40px;
       &__upper {
