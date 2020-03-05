@@ -18,7 +18,7 @@
     .main-chat__message-form__new-message
       .main-chat__message-form__new-message__input-area
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'main-chat__message-form__new-message__input-area__text', placeholder: 'type a message'
+          = f.text_field :content, id: 'new_message', class: 'main-chat__message-form__new-message__input-area__text', placeholder: 'type a message'
           = f.label :image, class: 'main-chat__message-form__new-message__input-area__image' do
             = icon('fas', 'image', class: 'icon')
             = f.file_field :image, class: 'hidden'
