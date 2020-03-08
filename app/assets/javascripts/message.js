@@ -32,11 +32,13 @@ $(function(){
     })
     .done(function(messages) {
       console.log(messages);
-      var insertHTML = '';
-      messages.forEach(function (message) {
-        insertHTML = buildHTML(message);
-        $('.main-chat__message-list').append(insertHTML);
-      })
+      if (messages.length !== 0) {
+        var insertHTML = '';
+        messages.forEach(function (message) {
+          insertHTML += buildHTML(message);
+          $('.main-chat__message-list').append(insertHTML);
+        })
+      }
       $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
     })
     .fail(function() {
