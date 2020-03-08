@@ -1,4 +1,4 @@
-.main-chat__message-list__message
+.main-chat__message-list__message{data: {message: {id: message.id}}}
   .main-chat__message-list__message__upper
     .main-chat__message-list__message__upper__user
       = message.user.name
@@ -6,6 +6,6 @@
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .main-chat__message-list__message__main
     - if message.content.present?
-      .main-chat__message-list__message__main__contents{data: {message: {id: message.id}}}
+      .main-chat__message-list__message__main__contents
         = message.content
     = image_tag message.image.url, class: 'main-chat__message-list__message__main__image' if message.image.present?
