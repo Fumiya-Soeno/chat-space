@@ -3,7 +3,7 @@ $(function(){
   image = (message.image) ? `<img class= "main-chat__message-list__message__main__image" src=${message.image} >` : "";
   var html =
     `
-    <div class="main-chat__message-list__message data-message-id=${message.id}">
+    <div class="main-chat__message-list__message" data-message-id=${message.id}>
       <div class="main-chat__message-list__message__upper">
         <div class="main-chat__message-list__message__upper__user">
           ${message.user_name}
@@ -31,7 +31,6 @@ $(function(){
       data: { id: last_message_id }
     })
     .done(function(messages) {
-      console.log(messages);
       if (messages.length !== 0) {
         var insertHTML = '';
         messages.forEach(function (message) {
