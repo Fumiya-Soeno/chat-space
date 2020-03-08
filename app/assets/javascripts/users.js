@@ -44,7 +44,6 @@ $(function(){
       $("#user-search-result").empty();
       users.forEach(user=>{
         html = buildHTML(user);
-        console.log(html);
         $('#user-search-result').append(html);
       })
     })
@@ -53,7 +52,6 @@ $(function(){
     });
   })
   $(document).on("click", ".chat-group-user__btn--add", function() {
-    console.log
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
