@@ -62,6 +62,9 @@ $(function(){
       $('.main-chat__message-form__new-message__input-area__send-btn').prop('disabled', false);
       $('form')[0].reset();
     })
+    .fail(function() {
+      alert('error');
+    })
   });
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
