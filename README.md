@@ -1,17 +1,19 @@
 # README
 
-##usersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |password|string|null: false|
-|mailadress|string|null: false|
+|email|string|null: false|
+|team_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :posts
 - has_many :groups_users
 - has_many :groups, through: :groups_users
+- has_many :teams
 
-##postsテーブル
+## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text||
@@ -24,7 +26,7 @@
 ## Validation
 - validates :posts, precence: true
 
-##groupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
