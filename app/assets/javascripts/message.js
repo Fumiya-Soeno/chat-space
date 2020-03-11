@@ -23,6 +23,9 @@ $(function(){
   }
   var reloadMessages = function() {
     var last_message_id = $(".main-chat__message-list__message:last").data("message-id");
+    if (last_message_id === undefined){
+      last_message_id = 0;
+    }
     $.ajax({
       type: 'GET',
       url: 'api/messages',
